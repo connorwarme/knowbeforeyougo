@@ -1,3 +1,11 @@
+notes to self:
+- add custom 404
+- add dynamic routing to chapter pages
+- add chapter page content
+- add contact form
+
+
+
 # Astro Starter Kit: Basics
 
 ```sh
