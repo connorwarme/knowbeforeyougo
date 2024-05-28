@@ -1,4 +1,7 @@
-export default const chapters = [
+// This file contains the data for the chapters of the book
+// for some reason, I couldn't get this to import into an astro component
+// not sure why!
+export default chapters = [
   {
     id: 1,
     title: 'Chapter 1',
