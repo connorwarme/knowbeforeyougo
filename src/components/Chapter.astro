@@ -64,8 +64,9 @@ const chapters = [
   <div>
     {
       chapters.map((chapter, index) => (
-        <Card key={index} href={chapter.url} title={chapter.title} name={chapter.name} body={chapter.content} />
-        ))
+        <Card href={chapter.url} title={chapter.title} name={chapter.name} body={chapter.content} />
+        )
+      )
     }
   </div>
 </section>
