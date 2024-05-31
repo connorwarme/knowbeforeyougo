@@ -6,6 +6,10 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    fontFamily: {
+      body: ["Montserrat", 'Georgia', 'Cambria', "Times New Roman", 'Times', 'serif'],
+      display: ["Cinzel", 'Georgia', 'Cambria', "Times New Roman", 'Times', 'serif'],
+    },
     extend: {
       colors: {
         offwhite: "#f4f1de",
