@@ -5,7 +5,7 @@ import MainText from "./components/MainText";
 
 function App() {
   return (
-    <div className="text-slate-800 bg-offwhite bg-slate">
+    <div className="text-slate-800 bg-offwhite bg-slate font-body">
       <Intro />
       <MainText />
       <Accordion />

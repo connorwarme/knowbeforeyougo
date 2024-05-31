@@ -2,7 +2,7 @@ const MainText = () => {
   return (
     <div className="px-3 bg-pool">
     <div>
-      <p className="text-xl font-semibold">&quot;For everything there is a season, and a time for every matter under heaven: a time to be born, and a time to die&quot;</p>
+      <p className="text-lg font-semibold ">&quot;For everything there is a season, and a time for every matter under heaven: a time to be born, and a time to die&quot;</p>
       <p className="text-center">Ecclesiates 3:1-2</p>
     </div>
       <div>
