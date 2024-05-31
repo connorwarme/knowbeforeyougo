@@ -1,14 +1,14 @@
 const MainText = () => {
   return (
-    <div className="px-3 bg-pool">
-    <div>
-      <p className="text-lg font-semibold ">&quot;For everything there is a season, and a time for every matter under heaven: a time to be born, and a time to die&quot;</p>
-      <p className="text-center">Ecclesiates 3:1-2</p>
-    </div>
+    <div className="px-3 bg-eggshell grid grid-row-1 gap-4">
       <div>
         A concise book to facilitate hope and the assurance of heaven for
         believers as well as provide an opportunity for the unconvinced to find
         peace as one&apos;s days draw short.
+      </div>
+      <div className="">
+        <p className="text-lg font-semibold font-rem text-center">&quot;For everything there is a season, and a time for every matter under heaven: a time to be born, and a time to die&quot;</p>
+        <p className="text-end font-display mr-4">Ecclesiates 3:1-2</p>
       </div>
       <div>
         At some point we recognize are leaving this life and are heading into

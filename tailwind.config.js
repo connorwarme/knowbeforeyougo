@@ -9,6 +9,7 @@ export default {
     fontFamily: {
       body: ["Montserrat", 'Georgia', 'Cambria', "Times New Roman", 'Times', 'serif'],
       display: ["Cinzel", 'Georgia', 'Cambria', "Times New Roman", 'Times', 'serif'],
+      rem: ["REM", 'Georgia', 'Cambria', "Times New Roman", 'Times', 'serif'],
     },
     extend: {
       colors: {
