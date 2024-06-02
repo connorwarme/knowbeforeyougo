@@ -1,0 +1,36 @@
+{
+  "chapter1": {
+  "id": "1",
+  "content": [
+    {"verses": [
+      {
+        "location": "Genesis 1:1",
+        "text": "In the beginning God created the heavens and the earth."
+      }
+    ]},
+    {"books": [
+      {
+        "title": "Book Title",
+        "author": "Author Name",
+        "url": "http://www.example.com"
+      }
+    ]},
+    {"songs": [
+      {
+        "title": "Song Title",
+        "artist": "Artist Name",
+        "url": "http://www.example.com",
+        "embed": "<iframe width='560' height='315' src='https://www.youtube.com/embed/fBuivUAWSE8?si=4hKp1Pf1ZuEEFnlW' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>"
+      }
+    ]}
+    ]
+  },
+  "chapter2": {
+    "id": "2",
+    "content": [
+      {"verses": []},
+      {"books": []},
+      {"songs": []}
+    ]
+  }
+}
