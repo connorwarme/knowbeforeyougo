@@ -1,6 +1,6 @@
 const MainText = () => {
   return (
-    <div className="px-3 bg-eggshell grid grid-row-1 gap-4">
+    <div className="px-4 bg-eggshell grid gap-4">
       <div>
         A concise book to facilitate hope and the assurance of heaven for
         believers as well as provide an opportunity for the unconvinced to find
