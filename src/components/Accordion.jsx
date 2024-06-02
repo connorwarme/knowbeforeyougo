@@ -14,7 +14,8 @@ export default function Accordion() {
     setSelected(index);
   };
   return (
-    <>
+    <section aria-label="Additional content to supplement book, organized by chapter" className="py-6 pl-4">
+      <h2 className="font-display font-bold text-xl">Additional Resources</h2>
       {cardArray.map((card, index) => (
         <Card
           key={index}
@@ -24,6 +25,6 @@ export default function Accordion() {
           index={index}
         />
       ))}
-    </>
+    </section>
   );
 }
