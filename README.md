@@ -4,7 +4,7 @@
 - under development
 - needs a logo
 - need additional content for chapters
-- need to add a footer
+- footer: needs social media links?
 - needs navigation menu
 - needs contact form?
 

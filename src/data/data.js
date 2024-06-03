@@ -1,3 +1,7 @@
+import intel from "./content.json"
+const data = intel
+// console.log(data);
+
 export const chapters = [
   {
     id: 1,

@@ -6,7 +6,9 @@ export default function Intro() {
       <div className="">
         <div className="bg-offwhite py-2">
           <div>
-          <div className="h-4 p-10"></div>
+          <div className="h-[76px]">
+            <span className="text-3xl font-display opacity-0">Departing Life</span>
+          </div>
             {/* <div className="h-4 bg-gradient-to-t from-deep to-eggshell"></div> */}
             <div className="flex justify-center py-2 bg-deep">
               <LiaCrossSolid className="h-12 w-12" />
