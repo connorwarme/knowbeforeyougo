@@ -6,7 +6,7 @@ import { RxHamburgerMenu } from "react-icons/rx";
 // need to figure out performant way to do this
 
 const Header = () => {
-  const { ref, inView, entry } = useInView({
+  const { ref, inView } = useInView({
     threshold: 1,
   });
 
@@ -17,10 +17,11 @@ const Header = () => {
     menu.current.classList.add('nav-active')
   }
   const handleOverlay = () => {
-    console.log('clicked overlay')
+    // need to add a delay to allow the menu to transition out
+    // also, it wouldn't work without the setTimeout :/
     setTimeout(() => {
       menu.current.classList.remove('nav-active')
-    }, 10)
+    }, 150)
   }
   return (
     <>

@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="pt-2 border-deep border-t-2">
           <p className="flex justify-center">
             Built by
-            <a href="https://github.com/connorwarme" aria-label="Link to developer GitHub page" className="font-display underline decoration-deep pl-1">Connor Warme</a>
+            <a href="https://github.com/connorwarme" target="_blank" rel="noreferrer" aria-label="Link to developer GitHub page" className="font-display underline decoration-deep pl-1">Connor Warme</a>
           </p>
         </div>
       </footer>
