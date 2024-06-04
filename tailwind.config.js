@@ -24,6 +24,13 @@ export default {
         aqua: "#52b69a",
         deep: "#34a0a4",
       },
+      keyframes: {
+        translateX: {
+          "0%": { transform: "translateX(100%)", opacity: "0" },
+          "80%": { transform: "translateX(-5%)" },
+          "100%": { transform: "translateX(0)", opacity: "1" }
+        }
+      },
     },
   },
   plugins: [],
