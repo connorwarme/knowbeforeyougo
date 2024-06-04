@@ -4,6 +4,7 @@ import Intro from "./components/Intro";
 import Accordion from "./components/Accordion";
 import MainText from "./components/MainText";
 import Footer from "./components/Footer";
+import Nav from "./components/Nav";
 
 function App() {
   return (
@@ -12,6 +13,9 @@ function App() {
       <Intro />
       <MainText />
       <Accordion />
+      <div className="h-dvh">
+        <Nav />
+      </div>
       <Footer />
     </div>
   );
