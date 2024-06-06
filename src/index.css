@@ -61,7 +61,9 @@ html {
   opacity: 0;
   transition: opacity 300ms ease-in-out;
 }
-.nav-active > .nav-overlay {
+/* .nav-active > .nav-overlay { */
+/* previously had this as above line, with ref */
+.nav-overlay .overlay-active {
   height: 100vh;
   top: 0;
   visibility: visible;
@@ -69,7 +71,6 @@ html {
   z-index: 11;
 }
 nav {
-  display: block;
   position: fixed;
   top: 0;
   right: 0;
@@ -79,5 +80,4 @@ nav {
   padding: 1rem 2rem;
 }
 .nav-active > nav {
-  display: block;
 }

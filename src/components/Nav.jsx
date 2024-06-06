@@ -1,7 +1,14 @@
 /* eslint-disable react/prop-types */
-import { useState } from "react";
-const Nav = ({ menu }) => {
+import { useState, useEffect } from "react";
+const Nav = ({ display, setDisplay }) => {
+  // previously passed through menu ref
   const [showResources, setShowResources] = useState(false);
+  const [displayNav, setDisplayNav] = useState(null)
+
+  useEffect(() => {
+    console.log('display changed', display)
+    setDisplayNav(display)
+  }, [display])
   
   const handleResourceClick = (e) => {
     console.log(e.target)
@@ -24,12 +31,19 @@ const Nav = ({ menu }) => {
   // when user clicks on button, remove the active class and go to corresponding id (e.g. #chapter1)
   const handleNavClick = () => {
     setShowResources(false)
-    menu.current.classList.remove('nav-active')
+    // menu.current.classList.remove('nav-active')
+    setDisplay(false)
     console.log('remove nav-active class too')
+    delay()
+  }
+  const delay = () => {
+    setTimeout(() => {
+      console.log(display)
+    }, 500)
   }
 
   return ( 
-    <nav className="z-20">
+    <nav className={`z-20 ${displayNav ? 'block' : 'hidden'}`}>
       <ul>
         <li><a href="#home" className="">Home</a></li>
         <li className="relative">
