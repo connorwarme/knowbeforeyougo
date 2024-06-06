@@ -1,5 +1,6 @@
+/* eslint-disable react/prop-types */
 import { useState } from "react";
-const Nav = () => {
+const Nav = ({ menu }) => {
   const [showResources, setShowResources] = useState(false);
   
   const handleResourceClick = (e) => {
@@ -8,7 +9,7 @@ const Nav = () => {
   }
   // learn how to implement submenu
 
-  const listStyle = `m-4 transition-all origin-center ${showResources ? 'block' : 'hidden'}`
+  const listStyle = `my-4 transition-all origin-center ${showResources ? 'block' : 'hidden'}`
   // tried to create an array of list (li) items,
   // but couldn't get the animation to work. Don't know why. 
   // something about when those are created vs when css is built ?
@@ -17,15 +18,27 @@ const Nav = () => {
   //     <a href={`#chapter${i + 1}`} className="p-4">Chapter {i + 1}</a>
   //   </li>
   // ))
-  
+
+  // thought:
+  // wanting to pass menu ref through to this component
+  // when user clicks on button, remove the active class and go to corresponding id (e.g. #chapter1)
+  const handleNavClick = () => {
+    setShowResources(false)
+    menu.current.classList.remove('nav-active')
+    console.log('remove nav-active class too')
+  }
+
   return ( 
-    <nav>
+    <nav className="z-20">
       <ul>
         <li><a href="#home" className="">Home</a></li>
         <li className="relative">
           <a href="#resources">Resources {showResources}</a>
           <span onClick={handleResourceClick}>{showResources ? '^^^' : '|||'}</span>
           <ul className={`absolute top-full width-full left-0 z-0`}>
+            <button onClick={handleNavClick}>
+              <a href="#chapter1">Chapter 11</a>
+            </button>
             <li className={`${listStyle} animate-[translateX_150ms_ease-in-out_forwards]`}>
               <a href="#chapter1" className="p-4">Chapter 1</a>
             </li>

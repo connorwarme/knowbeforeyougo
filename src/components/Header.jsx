@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { RxHamburgerMenu } from "react-icons/rx";
+import Nav from './Nav';
 // idea is that when the page initially loads, there is the original view of header
 // as the user scrolls, header transitions (smaller title, hamburger menu, etc. )
 // need to figure out performant way to do this
@@ -37,6 +38,7 @@ const Header = () => {
             <div className={`p-1 rounded-sm h-fit relative hover:cursor-pointer hover:shadow-md active:shadow-none active:left-[1px] active:top-[2px] ${inView ? 'hidden' : 'block'} md-2 z-20`} onClick={() => handleClick()} ref={menu}>
               <RxHamburgerMenu className='h-8 w-8 lg:hidden' />
               <div className='nav-overlay' onClick={() => handleOverlay()}></div>
+              <Nav menu={menu} />
             </div>
           </div>
         </div>
