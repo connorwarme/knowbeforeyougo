@@ -45,9 +45,6 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.nav-active {
-  display: block;
-}
 .nav-overlay {
   position: fixed;
   top: -1px;
@@ -61,23 +58,20 @@ html {
   opacity: 0;
   transition: opacity 300ms ease-in-out;
 }
-/* .nav-active > .nav-overlay { */
+.nav-active > .nav-overlay {
 /* previously had this as above line, with ref */
-.nav-overlay .overlay-active {
   height: 100vh;
   top: 0;
   visibility: visible;
   opacity: 1;
-  z-index: 11;
+  z-index: 1;
 }
 nav {
+  display: none;
   position: fixed;
   top: 0;
   right: 0;
-  min-height: 100dvh;
-  min-width: 170px;
-  background-color: azure;
-  padding: 1rem 2rem;
 }
-.nav-active > nav {
+nav.nav-active{
+  display: block;
 }
