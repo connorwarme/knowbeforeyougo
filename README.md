@@ -5,8 +5,8 @@
 - needs a logo
 - need additional content for chapters
 - footer: needs social media links?
-- needs navigation menu
-- needs contact form?
+- needs contact section
+- add photo?
 
 ## Logo Ideas:  
 - a bridge
