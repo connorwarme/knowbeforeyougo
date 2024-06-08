@@ -8,9 +8,14 @@ export default function Accordion() {
   const cardArray = chapters;
 
   const handleClick = (index) => {
+    console.log(index)
+    console.log(selected)
     if (selected === index) {
       return setSelected(null);
     }
+    updateSelected(index);
+  };
+  const updateSelected = (index) => {
     setSelected(index);
   };
   return (
@@ -22,6 +27,7 @@ export default function Accordion() {
           card={card}
           handleClick={handleClick}
           selected={selected}
+          updateSelected={updateSelected}
           index={index}
         />
       ))}

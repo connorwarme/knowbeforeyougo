@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 const Nav = ({ closeOverlay }) => {
   // previously passed through menu ref
   const [showResources, setShowResources] = useState(false);
@@ -36,12 +37,12 @@ const Nav = ({ closeOverlay }) => {
         <ul>
           <li><a href="#home" className="">Home</a></li>
           <li className="relative">
-            <a href="#resources">Resources {showResources}</a>
+            <Link to="#resources">Resources {showResources}</Link>
             <span onClick={handleResourceClick}>{showResources ? '^^^' : '|||'}</span>
             <ul className={`absolute top-full width-full left-0 z-0`}>
-              <button onClick={handleNavClick}>
-                <a href="#chapter1">Chapter 11</a>
-              </button>
+              <Link to={'#chapter1'} state={{index: 1}} onClick={handleNavClick}>
+                <span>Chapter 11</span>
+              </Link>
               <li className={`${listStyle} animate-[translateX_150ms_ease-in-out_forwards]`}>
                 <a href="#chapter1" className="p-4">Chapter 1</a>
               </li>
