@@ -10,14 +10,15 @@ export default function Card({ card, selected, updateSelected, handleClick }) {
   // and update the parent component's state accordingly...
   
   // if location.state is not null, update the parent component's state
-  location.state ? 
-  setTimeout(() => {
-    if (location.state.index === card.id) {
-      updateSelected(location.state.index)
-      location.state = null;
-    }
-    return null;
-   }, 500) : null;
+  (location.state && location.state.index !== null) ? 
+    setTimeout(() => {
+      if (location.state.index === card.id) {
+        updateSelected(location.state.index)
+        location.state.index = null;
+      }
+      return;
+    }, 500) : 
+    null;
   return (
     <>
       <div

@@ -9,20 +9,6 @@ const Nav = ({ closeOverlay }) => {
     console.log(e.target)
     setShowResources(!showResources);
   }
-  // learn how to implement submenu
-
-  // not sure this is best practice for tailwind
-  const listStyle = `my-4 transition-all origin-center ${showResources ? 'block' : 'hidden'}`
-
-  // tried to create an array of list (li) items,
-  // but couldn't get the animation to work. Don't know why. 
-  // something about when those are created vs when css is built ?
-  // Array.from({ length: 7 }, (_, i) => (
-  //   <li key={i} className={`${listStyle} animate-[translateX_${(i + 1) * 100}ms_ease-in-out_forwards]`}>
-  //     <a href={`#chapter${i + 1}`} className="p-4">Chapter {i + 1}</a>
-  //   </li>
-  // ))
-
   // thought:
   // wanting to pass menu ref through to this component
   // when user clicks on button, remove the active class and go to corresponding id (e.g. #chapter1)
@@ -30,6 +16,28 @@ const Nav = ({ closeOverlay }) => {
     setShowResources(false)
     closeOverlay()
   }
+
+  // learn how to implement submenu
+
+  // not sure this is best practice for tailwind
+  const listStyle = `my-4 transition-all origin-center ${showResources ? 'block' : 'hidden'}`
+  const linkAnimation = {
+    0: 'animate-[translateX_150ms_ease-in-out_forwards]',
+    1: 'animate-[translateX_250ms_ease-in-out_forwards]',
+    2: 'animate-[translateX_350ms_ease-in-out_forwards]',
+    3: 'animate-[translateX_450ms_ease-in-out_forwards]',
+    4: 'animate-[translateX_550ms_ease-in-out_forwards]',
+    5: 'animate-[translateX_650ms_ease-in-out_forwards]',
+    6: 'animate-[translateX_750ms_ease-in-out_forwards]',
+  }
+  const links = Array.from({ length: 7 }, (_, i) => {
+    const uniqueStyle = `${listStyle} ${linkAnimation[i]}`
+    return (
+      <li key={i} className={uniqueStyle}>
+        <Link to={`#chapter${i + 1}`} state={{index: i + 1}} onClick={handleNavClick} className="p-4">Chapter {i + 1}</Link>
+      </li>
+    )
+  })
 
   return (
     <>
@@ -40,35 +48,12 @@ const Nav = ({ closeOverlay }) => {
             <Link to="#resources">Resources {showResources}</Link>
             <span onClick={handleResourceClick}>{showResources ? '^^^' : '|||'}</span>
             <ul className={`absolute top-full width-full left-0 z-0`}>
-              <Link to={'#chapter1'} state={{index: 1}} onClick={handleNavClick}>
-                <span>Chapter 11</span>
-              </Link>
-              <li className={`${listStyle} animate-[translateX_150ms_ease-in-out_forwards]`}>
-                <a href="#chapter1" className="p-4">Chapter 1</a>
-              </li>
-              <li className={`${listStyle} animate-[translateX_150ms_ease-in-out_forwards]`}>
-                <a href="#chapter2" className="p-4">Chapter 2</a>
-              </li>
-              <li className={`${listStyle} animate-[translateX_250ms_ease-in-out_forwards]`}>
-                <a href="#chapter3" className="p-4">Chapter 3</a>
-              </li>
-              <li className={`${listStyle} animate-[translateX_350ms_ease-in-out_forwards]`}>
-                <a href="#chapter4" className="p-4">Chapter 4</a>
-              </li>
-              <li className={`${listStyle} animate-[translateX_650ms_ease-in-out_forwards]`}>
-                <a href="#chapter5" className="p-4">Chapter 5</a>
-              </li>
-              <li className={`${listStyle} animate-[translateX_750ms_ease-in-out_forwards]`}>
-                <a href="#chapter6" className="p-4">Chapter 6</a>
-              </li>
-              <li className={`${listStyle} animate-[translateX_850ms_ease-in-out_forwards]`}>
-                <a href="#chapter7" className="p-4">Chapter 7</a>
-              </li>
+              {links}
             </ul>
           </li>
         </ul>
       </div>
-      <div className="nav-overlay" onClick={() => closeOverlay(ref)}></div>
+      <div className="nav-overlay" onClick={() => closeOverlay()}></div>
     </> 
 
    );
