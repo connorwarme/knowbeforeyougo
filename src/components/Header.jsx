@@ -22,7 +22,6 @@ const Header = () => {
     // also, it wouldn't work without the setTimeout :/
     setTimeout(() => {
       navRef.current.classList.remove('nav-active')
-      console.log('remove nav-active class')
     }, 150)
   }
   const closeOverlay = () => {
