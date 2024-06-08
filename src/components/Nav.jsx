@@ -10,7 +10,9 @@ const Nav = ({ closeOverlay }) => {
   }
   // learn how to implement submenu
 
+  // not sure this is best practice for tailwind
   const listStyle = `my-4 transition-all origin-center ${showResources ? 'block' : 'hidden'}`
+
   // tried to create an array of list (li) items,
   // but couldn't get the animation to work. Don't know why. 
   // something about when those are created vs when css is built ?
@@ -20,14 +22,12 @@ const Nav = ({ closeOverlay }) => {
   //   </li>
   // ))
 
-  const ref = null
   // thought:
   // wanting to pass menu ref through to this component
   // when user clicks on button, remove the active class and go to corresponding id (e.g. #chapter1)
   const handleNavClick = () => {
     setShowResources(false)
-    closeOverlay(ref)
-    console.log('remove nav-active class too')
+    closeOverlay()
   }
 
   return (

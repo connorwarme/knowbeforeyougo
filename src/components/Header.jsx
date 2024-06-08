@@ -25,34 +25,41 @@ const Header = () => {
       console.log('remove nav-active class')
     }, 150)
   }
-  const closeOverlay = (ref) => {
+  const closeOverlay = () => {
     // thinking:
     // this is the funcation that gets passed to the Nav component
     // when the user clicks on a link, the overlay should close
-    // do I need to pass the ref to this function?
     handleOverlay()
   }
   const overlayStyle = 'fixed -top-[1px] right-0 w-0 h-[1px] bg-black/65 blur-sm opacity-0 invisible transition-all duration-300'
   const overlayActiveStyle = 'fixed h-dvh w-dvw top-0 right-0 bg-black/65 blur-sm opacity-1 z-10 visible transition-all duration-300'
 
+  // header div style, depending on view
+  const headerBgColor = 'flex items-center p-4 transition-all h-[84px] bg-transparent'
+  const headerBgColorDeep = 'flex items-center p-4 transition-all h-[84px] bg-deep'
   // spacer style, depending on view
   const spacerStyleNarrow = 'spacer transition-all width-0'
   const spacerStyleWide = 'spacer transition-all grow'
+  // title style, depending on view
+  const titleStyleNarrow = 'font-extrabold transition-all duration-300 text-xl translate-x-0'
+  const titleStyleWide = 'font-extrabold transition-all duration-300 text-3xl'
+  // hamburger menu style, depending on view
+  const hamburgerStyleHidden = 'p-1 rounded-sm h-fit relative hover:cursor-pointer hover:shadow-md active:shadow-none active:left-[1px] active:top-[2px] hidden md-2 z-20'
+  const hamburgerStyleVisible = 'p-1 rounded-sm h-fit relative hover:cursor-pointer hover:shadow-md active:shadow-none active:left-[1px] active:top-[2px] block md-2 z-20'
+
   return (
     <>
       <header className="font-bold font-display">
       <div id="top" ref={ref}></div>
         <div className='fixed top-0 left-0 w-dvw'>
-          <div className={`flex items-center p-4 transition-all h-[84px] ${inView ? 'bg-transparent' : 'bg-deep'}`}>
+          <div className={inView ? headerBgColor : headerBgColorDeep}>
             <div className={inView ? spacerStyleWide : spacerStyleNarrow}></div>
             <a href="#top" className='flex justify-center items-center'>
-              <h1 className={`font-extrabold transition-all duration-300 ${inView ? 'text-3xl' : 'text-xl translate-x-0'}`}>Departing Life</h1>
+              <h1 className={inView ? titleStyleWide : titleStyleNarrow}>Departing Life</h1>
             </a>
             <div className="spacer grow"></div>
-            <div className={`p-1 rounded-sm h-fit relative hover:cursor-pointer hover:shadow-md active:shadow-none active:left-[1px] active:top-[2px] ${inView ? 'hidden' : 'block'} md-2 z-20`} onClick={() => handleClick()}>
+            <div className={inView ? hamburgerStyleHidden : hamburgerStyleVisible} onClick={() => handleClick()}>
               <RxHamburgerMenu className='h-8 w-8 lg:hidden' />
-              {/* <div className="nav-overlay" onClick={() => handleOverlay()}></div> */}
-              {/* <Nav setDisplay={closeOverlay} /> */}
             </div>
           </div>
         </div>
