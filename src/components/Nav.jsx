@@ -1,12 +1,12 @@
 /* eslint-disable react/prop-types */
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
+import { MdExpandMore as Expand } from "react-icons/md";
 const Nav = ({ closeOverlay }) => {
   // previously passed through menu ref
   const [showResources, setShowResources] = useState(false);
 
-  const handleResourceClick = (e) => {
-    console.log(e.target)
+  const handleResourceClick = () => {
     setShowResources(!showResources);
   }
   // thought:
@@ -16,8 +16,13 @@ const Nav = ({ closeOverlay }) => {
     setShowResources(false)
     closeOverlay()
   }
-
-  // learn how to implement submenu
+  const handleOverlayClick = () => {
+    closeOverlay()
+    setTimeout(() => {
+      // otherwise you start to see the menu transition out
+      setShowResources(false)
+    }, 150)
+  }
 
   // not sure this is best practice for tailwind
   const listStyle = `my-4 transition-all origin-center ${showResources ? 'block' : 'hidden'}`
@@ -39,21 +44,30 @@ const Nav = ({ closeOverlay }) => {
     )
   })
 
+  // expand style, depending on view
+  const expandStyle = 'h-6 w-6 transition-all duration-300'
+  const expandStyleRotate = 'h-6 w-6 rotate-180 transition-all duration-300'
+
   return (
     <>
-      <div className="z-10 relative px-8 py-4 bg-white min-h-dvh min-w-[175px]">
-        <ul>
-          <li><a href="#home" className="">Home</a></li>
+      <div className="z-10 relative px-8 py-4 bg-offwhite min-h-dvh min-w-[200px] animate-[translateX_350ms_ease-in-out_forwards]">
+        <ul className="mt-[30%] *:my-4 h-auto transition-all duration-300">
+          <li><Link to="/" className="" onClick={handleNavClick}>Home</Link></li>
           <li className="relative">
-            <Link to="#resources">Resources {showResources}</Link>
-            <span onClick={handleResourceClick}>{showResources ? '^^^' : '|||'}</span>
-            <ul className={`absolute top-full width-full left-0 z-0`}>
+            <div className="flex items-center justify-between">
+              <Link to="#resources" className="relative flex items-center" onClick={handleNavClick}>Resources</Link>
+              <span onClick={handleResourceClick} className="ml-auto">
+                <Expand className={showResources ? expandStyleRotate : expandStyle} title={showResources ? 'Minimize' : 'Expand'} alt={`${showResources ? 'Minimize' : 'Expand'} the chapter links`} />
+              </span>
+            </div>
+            <ul className={`top-full width-full left-0 z-0 font-semibold text-sm`}>
               {links}
             </ul>
           </li>
+          <li><Link to="#contact" onClick={handleNavClick}>Contact</Link></li>
         </ul>
       </div>
-      <div className="nav-overlay" onClick={() => closeOverlay()}></div>
+      <div className="nav-overlay" onClick={() => handleOverlayClick()}></div>
     </> 
 
    );
