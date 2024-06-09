@@ -15,8 +15,8 @@ export default function Accordion() {
   };
   
   return (
-    <section aria-label="Additional content to supplement book, organized by chapter" className="py-6 pl-4">
-      <h2 className="font-display font-bold text-xl" id="resources">Additional Resources</h2>
+    <section aria-label="Additional content to supplement book, organized by chapter" className="py-6 px-4">
+      <h2 className="font-display font-bold text-xl mx-auto w-fit border-deep border-b-2 my-6" id="resources">Additional Resources</h2>
       {cardArray.map((card, index) => (
         <Card
           key={index}

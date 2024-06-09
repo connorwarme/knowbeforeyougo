@@ -1,5 +1,7 @@
 /* eslint-disable react/prop-types */
 import { useLocation } from "react-router-dom";
+import Content from "./Content";
+import { MdExpandMore as Expand } from "react-icons/md";
 
 export default function Card({ card, selected, updateSelected, handleClick }) {
   const location = useLocation();
@@ -19,19 +21,35 @@ export default function Card({ card, selected, updateSelected, handleClick }) {
       return;
     }, 500) : 
     null;
+
+  // to do:
+  // would be nice to add transition to the content-container
+  // (currently doesn't work)
+  const containerStyle = `content-container h-0 transition-all duration-500`
+  const containerStyleOpen = `content-container h-fit transition-all duration-500`
   return (
     <>
       <div
-        className="card"
+        className="card my-10"
         id={`chapter${card.id}`}
         onClick={() => handleClick(card.id)}
       >
-        <h3>
-          {card.title}
-          <span>&rarr;</span>
-          {card.name}
+        <h3 className="font-display flex flex-col">
+          <span>{card.title}</span>
+          <span className="self-center font-bold text-lg">{card.name}</span>
         </h3>
-        {selected === card.id ? <p>{card.description}</p> : null}
+        <div className={selected === card.id ? containerStyleOpen : containerStyle}>
+          { selected === card.id && <Content content={card.content} /> }
+        </div>
+        <div className="button-container flex justify-center">
+          <button>
+            {
+              selected === card.id 
+              ? <Expand className="h-10 w-10 rotate-180 transition-all duration-200" title="Minimize" alt={`Minimize chapter ${card.id} content`} />
+              : <Expand className="h-10 w-10 transition-all duration-200" title="Expand" alt={`Expand chapter ${card.id} content`} />
+            }
+          </button>
+        </div>
       </div>
     </>
   );
