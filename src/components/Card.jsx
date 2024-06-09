@@ -31,7 +31,7 @@ export default function Card({ card, selected, updateSelected, handleClick }) {
           <span>&rarr;</span>
           {card.name}
         </h3>
-        {selected === card.id ? <p>{card.content}</p> : null}
+        {selected === card.id ? <p>{card.description}</p> : null}
       </div>
     </>
   );
