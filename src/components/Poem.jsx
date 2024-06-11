@@ -9,7 +9,12 @@ const Poem = ({ poem }) => {
       <div>
         {
           poem.verses.map((verse, index) => {
-            <p key={index}>{verse}</p>
+            console.log(verse)
+            return (
+              <div key={index} className="flex justify-center">
+                <p className="whitespace-pre-line">{`${verse}`}</p>
+              </div>
+            )
           })
         }
       </div>
