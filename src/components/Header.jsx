@@ -57,9 +57,9 @@ const Header = () => {
               <h1 className={inView ? titleStyleWide : titleStyleNarrow}>Departing Life</h1>
             </a>
             <div className="spacer grow"></div>
-            <div className={inView ? hamburgerStyleHidden : hamburgerStyleVisible} onClick={() => handleClick()} alt="Click for menu">
+            <button className={inView ? hamburgerStyleHidden : hamburgerStyleVisible} onClick={() => handleClick()} alt="Navigation menu">
               <RxHamburgerMenu className='h-8 w-8 lg:hidden' />
-            </div>
+            </button>
           </div>
         </div>
         <nav ref={navRef}>

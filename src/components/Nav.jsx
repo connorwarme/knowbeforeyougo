@@ -56,9 +56,9 @@ const Nav = ({ closeOverlay }) => {
           <li className="relative">
             <div className="flex items-center justify-between">
               <Link to="#resources" className="relative flex items-center" onClick={handleNavClick}>Resources</Link>
-              <span onClick={handleResourceClick} className="ml-auto">
+              <button onClick={handleResourceClick} className="ml-auto" title="Resource links">
                 <Expand className={showResources ? expandStyleRotate : expandStyle} title={showResources ? 'Minimize' : 'Expand'} alt={`${showResources ? 'Minimize' : 'Expand'} the chapter links`} />
-              </span>
+              </button>
             </div>
             <ul className={`top-full width-full left-0 z-0 font-semibold text-sm`}>
               {links}
