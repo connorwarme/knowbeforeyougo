@@ -6,7 +6,7 @@ const Content = ({ content }) => {
       {
         content.verses && (
           <ul className="list-none">
-            <h3 className="font-display font-semibold text-lg">Verses</h3>
+            <h3 className="font-display font-semibold text-lg my-2">Verses</h3>
             {
               content.verses.map((verse, index) => (
                 <Verse key={index} verse={verse} />
