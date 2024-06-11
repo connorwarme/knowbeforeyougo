@@ -2,6 +2,7 @@
 import Verse from "./Verse";
 import Book from "./Book";
 import Song from "./Song";
+import Poem from "./Poem";
 
 const Content = ({ content }) => {
   return ( 
@@ -37,6 +38,18 @@ const Content = ({ content }) => {
             {
               content.songs.map((song, index) => (
                 <Song key={index} song={song} />
+              ))
+            }
+          </ul>
+        )
+      }
+      {
+        content.poems && (
+          <ul className="list-none border-b-2 border-deep mb-4 last-of-type:border-b-0">
+            <h3 className="font-display font-semibold text-lg my-2">{content.poems.length > 1 ? 'Poems' : 'Poem'}</h3>
+            {
+              content.poems.map((poem, index) => (
+                <Poem key={index} poem={poem} />
               ))
             }
           </ul>
