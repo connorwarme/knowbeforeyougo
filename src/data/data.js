@@ -22,7 +22,24 @@ const chapter1Verses = [
   }
 ]
 const chapter1Books = [
-  {}
+  {
+    id: 0,
+    title: "Being Mortal: Medicine and What Matters in the End",
+    author: "Atul Gawande",
+    url: "https://atulgawande.com/book/being-mortal/"
+  },
+  {
+    id: 1,
+    title: "Nearing Home: Life, Faith, and Finishing Well",
+    author: "Billy Graham",
+    url: "https://faithgateway.com/products/nearing-home-life-faith-and-finishing-well-1?",
+  },
+  {
+    id: 2,
+    title: "Finishing Our Course with Joy: Guidance from God for Engaging with Our Aging",
+    author: "J.I. Packer",
+    url: "https://www.crossway.org/books/finishing-our-course-with-joy-tpb/"
+  }
 ]
 const chapter1Songs = [
   {
@@ -144,8 +161,8 @@ const chapter4Verses = [
   {
     id: 5,
     location: "Psalm 46:1",
-    text: "God is our refuge and strength, a very present help in trouble.",
-    version: "ESV"
+    text: "God is our refuge and strength, always ready to help in times of trouble.",
+    version: "NLT"
   },
   {
     id: 6,
