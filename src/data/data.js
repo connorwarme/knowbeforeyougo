@@ -24,19 +24,22 @@ const chapter1Verses = [
 const chapter1Books = [
   {
     id: 0,
-    title: "Being Mortal: Medicine and What Matters in the End",
+    title: "Being Mortal",
+    tagline: "Medicine and What Matters in the End",
     author: "Atul Gawande",
     url: "https://atulgawande.com/book/being-mortal/"
   },
   {
     id: 1,
-    title: "Nearing Home: Life, Faith, and Finishing Well",
+    title: "Nearing Home",
+    tagline: "Life, Faith, and Finishing Well",
     author: "Billy Graham",
     url: "https://faithgateway.com/products/nearing-home-life-faith-and-finishing-well-1?",
   },
   {
     id: 2,
-    title: "Finishing Our Course with Joy: Guidance from God for Engaging with Our Aging",
+    title: "Finishing Our Course with Joy",
+    tagline: "Guidance from God for Engaging with Our Aging",
     author: "J.I. Packer",
     url: "https://www.crossway.org/books/finishing-our-course-with-joy-tpb/"
   }
@@ -46,19 +49,19 @@ const chapter1Songs = [
     title: 'Unsteady',
     artist: 'X Ambassadors',
     url: 'https://www.youtube.com/watch?v=WaiCCUryCEk',
-    embed: '<iframe width="560" height="315" src="https://www.youtube.com/embed/WaiCCUryCEk?si=uI0NiB_y7-_IU92y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'
+    embed: 'https://www.youtube.com/embed/WaiCCUryCEk?si=uI0NiB_y7-_IU92y'
   },
   {
     title: 'Hurt',
     artist: 'Johnny Cash',
-    url: 'https://www.youtube.com/watch?v=vt1Pwfnh5pc',
-    embed: '<iframe width="560" height="315" src="https://www.youtube.com/embed/vt1Pwfnh5pc?si=Kz7H1hHvQ2Gv7wX3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+    url: 'https://www.youtube.com/embed/8AHCfZTRGiI',
+    embed: 'https://www.youtube.com/embed/8AHCfZTRGiI?si=3kZPeQUuPWoRbRaT'
   },
   {
     title: 'Eiley',
     artist: 'Too Close To Touch',
     url: 'https://www.youtube.com/watch?v=pY9g5MYOcVw',
-    embed: `<iframe width="560" height="315" src="https://www.youtube.com/embed/pY9g5MYOcVw?si=AYNGCc60W4jT7Zfr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`
+    embed: 'https://www.youtube.com/embed/pY9g5MYOcVw?si=AYNGCc60W4jT7Zfr'
   }
 ]
 const chapter2Verses = [

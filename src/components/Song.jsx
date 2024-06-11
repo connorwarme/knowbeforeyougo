@@ -6,8 +6,8 @@ const Song = ({ song }) => {
       <p className="font-display font-bold text-lg underline">{song.title}</p>
       <p className="">{song.artist}</p>
     </div>
-    <div>
-      <iframe className="aspect-video" src={song.embed} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <div className="my-2">
+      <iframe className="aspect-video max-w-[100%] h-42" src={song.embed} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
   </li>
    );
