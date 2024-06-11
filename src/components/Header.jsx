@@ -48,8 +48,8 @@ const Header = () => {
 
   return (
     <>
-      <header className="font-bold font-display">
-      <div id="top" ref={ref}></div>
+      <header className="font-bold font-display relative z-10">
+        <div id="top" ref={ref}></div>
         <div className='fixed top-0 left-0 w-dvw'>
           <div className={inView ? headerBgColor : headerBgColorDeep}>
             <div className={inView ? spacerStyleWide : spacerStyleNarrow}></div>
@@ -62,7 +62,7 @@ const Header = () => {
             </button>
           </div>
         </div>
-        <nav ref={navRef}>
+        <nav ref={navRef} className='z-20'>
           <Nav closeOverlay={closeOverlay} />
         </nav>
       </header>
