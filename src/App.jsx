@@ -19,8 +19,11 @@ function App() {
       setTimeout(() => {
         const id = hash.replace('#', '');
         const element = document.getElementById(id);
-        if (element) {
+        if (element && id === 'top') {
           element.scrollIntoView();
+        } else if (element) {
+          // account for header height
+          window.scrollTo(0, element.offsetTop - 100)
         }
       }, 0);
     }
