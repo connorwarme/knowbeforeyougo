@@ -30,8 +30,8 @@ export default function Card({ card, selected, updateSelected, handleClick }) {
   return (
     <>
       <div
-        className="card my-10"
-        id={`chapter${card.id}`}
+        className="card my-8"
+        id={card.hash}
         onClick={() => handleClick(card.id)}
       >
         <h3 className="font-display flex flex-col">
