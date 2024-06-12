@@ -38,6 +38,7 @@ export default function Accordion() {
           handleClick={handleClick}
           selected={selected}
           updateSelected={setSelected}
+          index={topic.id}
         />
       ))}
     </section>

@@ -5,15 +5,22 @@ import { MdExpandMore as Expand } from "react-icons/md";
 const Nav = ({ closeOverlay }) => {
   // previously passed through menu ref
   const [showResources, setShowResources] = useState(false);
+  const [showTopics, setShowTopics] = useState(false);
 
   const handleResourceClick = () => {
     setShowResources(!showResources);
+    setShowTopics(false)
+  }
+  const handleTopicClick = () => {
+    setShowTopics(!showTopics);
+    setShowResources(false)
   }
   // thought:
   // wanting to pass menu ref through to this component
   // when user clicks on button, remove the active class and go to corresponding id (e.g. #chapter1)
   const handleNavClick = () => {
     setShowResources(false)
+    setShowTopics(false)
     closeOverlay()
   }
   const handleOverlayClick = () => {
@@ -21,6 +28,7 @@ const Nav = ({ closeOverlay }) => {
     setTimeout(() => {
       // otherwise you start to see the menu transition out
       setShowResources(false)
+      setShowTopics(false)
     }, 150)
   }
 
@@ -35,11 +43,22 @@ const Nav = ({ closeOverlay }) => {
     5: 'animate-[translateX_650ms_ease-in-out_forwards]',
     6: 'animate-[translateX_750ms_ease-in-out_forwards]',
   }
-  const links = Array.from({ length: 7 }, (_, i) => {
+  const chapterLinks = Array.from({ length: 7 }, (_, i) => {
     const uniqueStyle = `${listStyle} ${linkAnimation[i]}`
     return (
       <li key={i} className={uniqueStyle}>
         <Link to={`#chapter${i + 1}`} state={{index: i + 1}} onClick={handleNavClick} className="p-4">Chapter {i + 1}</Link>
+      </li>
+    )
+  })
+  const topicLinkStyle = `my-4 transition-all origin-center ${showTopics ? 'block' : 'hidden'}`
+  const topics = ['Aging', 'Death', 'Heaven', 'Suffering', 'Trials', 'Scripture']
+  const topicLinks = topics.map((topic, i) => {
+    const uniqueStyle = `${topicLinkStyle} ${linkAnimation[i]}`
+    const lowercase = topic.charAt(0).toLowerCase() + topic.slice(1)
+    return (
+      <li key={i} className={uniqueStyle}>
+        <Link to={`#${lowercase}`} state={{index: i + chapterLinks.length + 1}} onClick={handleNavClick} className="p-4">{topic}</Link>
       </li>
     )
   })
@@ -61,7 +80,18 @@ const Nav = ({ closeOverlay }) => {
               </button>
             </div>
             <ul className={`top-full width-full left-0 z-0 font-semibold text-sm`}>
-              {links}
+              {chapterLinks}
+            </ul>
+          </li>
+          <li className="relative">
+            <div className="flex items-center justify-between">
+              <Link to="#topics" className="relative flex items-center" onClick={handleNavClick}>Topics</Link>
+              <button onClick={handleTopicClick} className="ml-auto" title="Resource links">
+                <Expand className={showTopics ? expandStyleRotate : expandStyle} title={showTopics ? 'Minimize' : 'Expand'} alt={`${showTopics ? 'Minimize' : 'Expand'} the topic links`} />
+              </button>
+            </div>
+            <ul className={`top-full width-full left-0 z-0 font-semibold text-sm`}>
+              {topicLinks}
             </ul>
           </li>
           <li><Link to="#contact" onClick={handleNavClick}>Contact</Link></li>
