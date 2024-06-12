@@ -359,12 +359,10 @@ export const chapters = [
     title: "Chapter 2",
     name: "Life Is Hard",
     description: "This is chapter 2",
-    content: "This is the content of chapter 2",
-    // content: {
-    //   verses: chapter2Verses,
-    //   books: chapter2Books,
-    //   songs: chapter2Songs
-    // }
+    content: {
+      verses: chapter2Verses,
+      songs: chapter2Songs
+    }
   },
   {
     id: 3,
@@ -372,12 +370,9 @@ export const chapters = [
     title: "Chapter 3",
     name: "Final Common Pathway",
     description: "This is chapter 3",
-    content: "This is the content of chapter 3",
-    // content: {
-    //   verses: chapter3Verses,
-    //   books: chapter3Books,
-    //   songs: chapter3Songs
-    // }
+    content: {
+      verses: chapter3Verses
+    }
   },
   {
     id: 4,
@@ -385,12 +380,9 @@ export const chapters = [
     title: "Chapter 4",
     name: `Don't Lose Heart`,
     description: "This is chapter 4",
-    content: "This is the content of chapter 4",
-    // content: {
-    //   verses: chapter4Verses,
-      // books: chapter4Books,
-      // songs: chapter4Songs
-    // }
+    content: {
+      verses: chapter4Verses
+    }
   },
   {
     id: 5,
@@ -398,12 +390,10 @@ export const chapters = [
     title: "Chapter 5",
     name: "Get Ready Pilgrim",
     description: "This is chapter 5",
-    content: "This is the content of chapter 5",
-    // content: {
-    //   verses: chapter5Verses,
-    //   books: chapter5Books,
-    //   songs: chapter5Songs
-    // }
+    content: {
+      verses: chapter5Verses,
+      songs: chapter5Songs
+    }
   },
   {
     id: 6,
@@ -411,12 +401,9 @@ export const chapters = [
     title: "Chapter 6",
     name: "The Best is Yet to Come",
     description: "This is chapter 6",
-    content: "This is the content of chapter 6",
-    // content: {
-    //   verses: chapter6Verses,
-    //   books: chapter6Books,
-    //   songs: chapter6Songs
-    // }
+    content: {
+      verses: chapter6Verses
+    }
   },
   {
     id: 7,
@@ -424,11 +411,9 @@ export const chapters = [
     title: "Chapter 7",
     name: "Be Strong and Courageous",
     description: "This is chapter 7",
-    content: "This is the content of chapter 7",
-    // content: {
-    //   verses: chapter7Verses,
-    //   books: chapter7Books,
-    //   songs: chapter7Songs
-    // }
+    content: {
+      verses: chapter7Verses,
+      songs: chapter7Songs
+    }
   },
 ];
