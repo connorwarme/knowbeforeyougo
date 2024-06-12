@@ -19,7 +19,7 @@ const MainText = () => {
       </div>
       <div>
         Now is the time to wrestle with existential questions like:
-        <ul className="list-disc ml-4">
+        <ul className="list-disc ml-4 mt-2">
           <li>Is there something else after I pass from this world?</li>
           <li>How can I end my days here well?</li>
           <li>What can I do to lessen the pain of those I leave behind?</li>

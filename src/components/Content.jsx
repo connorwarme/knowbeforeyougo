@@ -3,6 +3,7 @@ import Verse from "./Verse";
 import Book from "./Book";
 import Song from "./Song";
 import Poem from "./Poem";
+import Quote from "./Quote";
 
 const Content = ({ content }) => {
   return ( 
@@ -50,6 +51,18 @@ const Content = ({ content }) => {
             {
               content.poems.map((poem, index) => (
                 <Poem key={index} poem={poem} />
+              ))
+            }
+          </ul>
+        )
+      }
+      {
+        content.quotes && (
+          <ul className="list-none border-b-2 border-deep mb-4 last-of-type:border-b-0">
+            <h3 className="font-display font-semibold text-lg my-2">{content.quotes.length > 1 ? 'Quotes' : 'Quote'}</h3>
+            {
+              content.quotes.map((quote, index) => (
+                <Quote key={index} quote={quote} />
               ))
             }
           </ul>
