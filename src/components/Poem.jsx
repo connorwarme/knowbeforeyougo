@@ -6,12 +6,11 @@ const Poem = ({ poem }) => {
         <p className="font-display font-bold text-lg underline">{poem.title}</p>
         <p className="">{poem.author}</p>
       </div>
-      <div>
+      <div className="my-2">
         {
           poem.verses.map((verse, index) => {
-            console.log(verse)
             return (
-              <div key={index} className="flex justify-center">
+              <div key={index} className="flex my-2">
                 <p className="whitespace-pre-line">{`${verse}`}</p>
               </div>
             )
