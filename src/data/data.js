@@ -343,7 +343,7 @@ const chapter7Songs = [
 export const chapters = [
   {
     id: 1,
-    url: "/chapter-1",
+    hash: "chapter1",
     title: "Chapter 1",
     name: `These Shoes Don't Fit`,
     description: "This is chapter 1",
@@ -355,7 +355,7 @@ export const chapters = [
   },
   {
     id: 2,
-    url: "/chapter-2",
+    hash: "chapter2",
     title: "Chapter 2",
     name: "Life Is Hard",
     description: "This is chapter 2",
@@ -368,7 +368,7 @@ export const chapters = [
   },
   {
     id: 3,
-    url: "/chapter-3",
+    hash: "chapter3",
     title: "Chapter 3",
     name: "Final Common Pathway",
     description: "This is chapter 3",
@@ -381,7 +381,7 @@ export const chapters = [
   },
   {
     id: 4,
-    url: "/chapter-4",
+    hash: "chapter4",
     title: "Chapter 4",
     name: `Don't Lose Heart`,
     description: "This is chapter 4",
@@ -394,7 +394,7 @@ export const chapters = [
   },
   {
     id: 5,
-    url: "/chapter-5",
+    hash: "chapter5",
     title: "Chapter 5",
     name: "Get Ready Pilgrim",
     description: "This is chapter 5",
@@ -407,7 +407,7 @@ export const chapters = [
   },
   {
     id: 6,
-    url: "/chapter-6",
+    hash: "chapter6",
     title: "Chapter 6",
     name: "The Best is Yet to Come",
     description: "This is chapter 6",
@@ -420,7 +420,7 @@ export const chapters = [
   },
   {
     id: 7,
-    url: "/chapter-7",
+    hash: "chapter7",
     title: "Chapter 7",
     name: "Be Strong and Courageous",
     description: "This is chapter 7",

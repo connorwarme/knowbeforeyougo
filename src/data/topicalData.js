@@ -38,13 +38,13 @@ const agingSongs = []
 const deathVerses = [
   {
     id: 0,
-    reference: "Ecclesiastes 3:1-2",
+    location: "Ecclesiastes 3:1-2",
     text: "For everything there is a season, and a time for every matter under heaven: a time to be born, and a time to die.",
     version: "ESV"
   },
   {
     id: 1,
-    reference: "Hebrews 9:27-28",
+    location: "Hebrews 9:27-28",
     text: "And just as it is appointed for man to die once, and after that comes judgment, so Christ, having been offered once to bear the sins of many, will appear a second time, not to deal with sin but to save those who are eagerly waiting for him.",
     version: "ESV"
   }
@@ -80,19 +80,19 @@ const deathPoems = [
 const heavenVerses = [
   {
     id: 0,
-    reference: "John 14:1-3",
+    location: "John 14:1-3",
     text: "Let not your hearts be troubled. Believe in God; believe also in me. In my Father's house are many rooms. If it were not so, would I have told you that I go to prepare a place for you? And if I go and prepare a place for you, I will come again and will take you to myself, that where I am you may be also.",
     version: "ESV"
   },
   {
     id: 1,
-    reference: "1 Corinthians 15:53-55",
+    location: "1 Corinthians 15:53-55",
     text: "For this perishable body must put on the imperishable, and this mortal body must put on immortality. When the perishable puts on the imperishable, and the mortal puts on immortality, then shall come to pass the saying that is written: 'Death is swallowed up in victory.' 'O death, where is your victory? O death, where is your sting?'",
     version: "ESV"
   },
   {
     id: 2,
-    reference: "2 Corinthians 5:1-10",
+    location: "2 Corinthians 5:1-10",
     text: "For we know that if the tent that is our earthly home is destroyed, we have a building from God, a house not made with hands, eternal in the heavens. For in this tent we groan, longing to put on our heavenly dwelling, if indeed by putting it on we may not be found naked. For while we are still in this tent, we groan, being burdened—not that we would be unclothed, but that we would be further clothed, so that what is mortal may be swallowed up by life. He who has prepared us for this very thing is God, who has given us the Spirit as a guarantee. So we are always of good courage. We know that while we are at home in the body we are away from the Lord, for we walk by faith, not by sight. Yes, we are of good courage, and we would rather be away from the body and at home with the Lord. So whether we are at home or away, we make it our aim to please him. For we must all appear before the judgment seat of Christ, so that each one may receive what is due for what he has done in the body, whether good or evil.",
     version: "ESV"
   }
@@ -311,6 +311,77 @@ const scriptureQuotes = [
   {
     id: 0,
     author: 'Blaise Pascal',
-    quote: 'Truth is so obscure in these times, and falsehood so established, that, unless we love the truth, we cannot know it.'
+    text: 'Truth is so obscure in these times, and falsehood so established, that, unless we love the truth, we cannot know it.'
+  }
+]
+
+export const topics = [
+  {
+    id: 8,
+    hash: "aging",
+    title: null,
+    name: `Aging`,
+    description: "This topic is about aging.",
+    content: {
+      // verses: agingVerses,
+      books: agingBooks,
+      // songs: agingSongs
+    }
+  },
+  {
+    id: 9,
+    hash: "death",
+    title: null,
+    name: 'Death',
+    description: 'Topic about death.',
+    content: {
+      verses: deathVerses,
+      poems: deathPoems,
+    }
+  },
+  {
+    id: 10,
+    hash: "heaven",
+    title: null,
+    name: 'Heaven',
+    description: 'Topic about heaven.',
+    content: {
+      verses: heavenVerses,
+      books: heavenBooks,
+      poems: heavenPoems,
+    }
+  },
+  {
+    id: 11,
+    hash: "suffering",
+    title: null,
+    name: 'Suffering',
+    description: 'Topic about suffering.',
+    content: {
+      verses: sufferingVerses,
+      books: sufferingBooks,
+      poems: sufferingPoems,
+    }
+  },
+  {
+    id: 12,
+    hash: "trials",
+    title: null,
+    name: 'Trials',
+    description: 'Topic about trials.',
+    content: {
+      verses: trialsVerses,
+    }
+  },
+  {
+    id: 13,
+    hash: "scripture",
+    title: null,
+    name: 'Scripture',
+    description: 'Topic about scripture.',
+    content: {
+      verses: scriptureVerses,
+      quotes: scriptureQuotes,
+    }
   }
 ]
