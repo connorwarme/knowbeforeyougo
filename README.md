@@ -3,10 +3,10 @@
 ## Notes:  
 - under development
 - needs a logo
-- need additional content for chapters
-- footer: needs social media links?
 - needs contact section
+- needs meta tags
 - add photo?
+- custom domain
 
 ## Logo Ideas:  
 - a bridge
