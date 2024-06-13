@@ -12,24 +12,23 @@ function App() {
 
   useEffect(() => {
     // if not a hash link, scroll to top
-    if (hash === '') {
+    if (hash === "") {
       window.scrollTo(0, 0);
     }
     // else scroll to id
     else {
       setTimeout(() => {
-        const id = hash.replace('#', '');
+        const id = hash.replace("#", "");
         const element = document.getElementById(id);
-        if (element && id === 'top') {
+        if (element && id === "top") {
           element.scrollIntoView();
         } else if (element) {
           // account for header height
-          window.scrollTo(0, element.offsetTop - 100)
+          window.scrollTo(0, element.offsetTop - 100);
         }
       }, 0);
     }
   }, [pathname, hash, key]); // do this on route change
-
 
   return (
     <div className="bg-offwhite text-night bg-slate font-body flex flex-col">

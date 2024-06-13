@@ -1,56 +1,56 @@
-import { useState } from 'react'
-import { Link } from 'react-router-dom'
-import { MdOutlineErrorOutline as ErrorIcon } from 'react-icons/md'
-import { VscLoading as LoadingIcon } from 'react-icons/vsc'
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import { MdOutlineErrorOutline as ErrorIcon } from "react-icons/md";
+import { VscLoading as LoadingIcon } from "react-icons/vsc";
 
 const Contact = () => {
-  const [email, setEmail] = useState('')
-  const [message, setMessage] = useState('')
-  const [emailError, setEmailError] = useState(null)
-  const [messageError, setMessageError] = useState(null)
-  const [pending, setPending] = useState(null)
-  const [success, setSuccess] = useState(null)
-  const [error, setError] = useState(false)
-  const [response, setResponse] = useState(null)
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [emailError, setEmailError] = useState(null);
+  const [messageError, setMessageError] = useState(null);
+  const [pending, setPending] = useState(null);
+  const [success, setSuccess] = useState(null);
+  const [error, setError] = useState(false);
+  const [response, setResponse] = useState(null);
 
   const handleEmail = (e) => {
     if (e.target.value.length === 0) {
-      setEmailError('Email is required.')
+      setEmailError("Email is required.");
     } else {
-      setEmail(e.target.value)
-      setEmailError(null)
+      setEmail(e.target.value);
+      setEmailError(null);
     }
-  }
+  };
   const handleMessage = (e) => {
     if (e.target.value.length === 0) {
-      setMessageError('Message is required.')
+      setMessageError("Message is required.");
     } else {
-      setMessage(e.target.value)
-      setMessageError(null)
+      setMessage(e.target.value);
+      setMessageError(null);
     }
-  }
+  };
   const checkForm = () => {
     if (message.length > 0 && email.length > 2) {
-      return true
+      return true;
     }
     if (message.length === 0) {
-      setMessageError('Message is required.')
+      setMessageError("Message is required.");
     }
     if (email.length <= 2) {
-      setEmailError('Email is required.')
+      setEmailError("Email is required.");
     }
-    setPending(false)
-    return false
-  }
+    setPending(false);
+    return false;
+  };
   const handleSubmit = (e) => {
-    e.preventDefault()
-    setPending(true)
+    e.preventDefault();
+    setPending(true);
     if (checkForm()) {
-      fetch('https://dubmailer.fly.dev/contactauthor', {
-        method: 'POST',
+      fetch("https://dubmailer.fly.dev/contactauthor", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
-          Accept: 'application/json',
+          "Content-Type": "application/json",
+          Accept: "application/json",
         },
         body: JSON.stringify({
           email: email,
@@ -60,30 +60,34 @@ const Contact = () => {
         .then((response) => response.json())
         .then((data) => {
           if (data && data.errors) {
-            setSuccess(false)
-            setError(true)
+            setSuccess(false);
+            setError(true);
           } else {
-            setSuccess(true)
-            setResponse(data)
+            setSuccess(true);
+            setResponse(data);
           }
-          setPending(false)
+          setPending(false);
 
           // console.log(data)
         })
         .catch((e) => {
-          console.log(e)
-          setSuccess(false)
-          setPending(false)
-          setError(true)
-        })
+          console.log(e);
+          setSuccess(false);
+          setPending(false);
+          setError(true);
+        });
     }
-  }
-
+  };
 
   return (
     <div className="w-dvw sm:grid sm:grid-cols-9 sm:justify-items-center">
       <div className="sm:col-start-2 sm:col-end-9 sm:w-[70%] sm:max-w-2xl">
-      <h2 className="font-display font-bold text-xl sm:text-3xl lg:text-5xl mx-auto w-fit border-deep border-b-2 my-6 sm:border-b-4 lg:my-16" id="contact">Contact</h2>
+        <h2
+          className="font-display font-bold text-xl sm:text-3xl lg:text-5xl mx-auto w-fit border-deep border-b-2 my-6 sm:border-b-4 lg:my-16"
+          id="contact"
+        >
+          Contact
+        </h2>
         <section className="mx-auto flex w-full flex-col p-4 py-8 transition-all md:rounded-md lg:p-8">
           {!success && (
             <form
@@ -151,8 +155,9 @@ const Contact = () => {
                       Apologies! There was an error sending your message.
                     </p>
                   </div>
-                  <p className='text-center'>
-                    Please refresh the page to try again. Sorry for the inconvenience!
+                  <p className="text-center">
+                    Please refresh the page to try again. Sorry for the
+                    inconvenience!
                   </p>
                 </div>
               )}
@@ -162,13 +167,13 @@ const Contact = () => {
             <div className="flex flex-col gap-6 font-play ">
               <h3 className="self-center text-2xl">Thanks for reaching out!</h3>
               <p className="text-center">
-                I&apos;ll get back to you shortly, with my reply going to{' '}
+                I&apos;ll get back to you shortly, with my reply going to{" "}
                 {response.contact.email}.
               </p>
               <div className="flex justify-center">
                 <Link
-                  to={'/'}
-                  className="btn-link relative flex items-center px-4 py-2 shadow-md shadow-night/50 outline-night hover:border-night active:left-[1px] active:top-[2px] active:shadow-none md:h-14 md:px-8 lg:px-12"
+                  to={"/"}
+                  className="btn-link relative flex items-center px-4 py-2 border-deep border-2 rounded-md shadow-md shadow-night/50 outline-night hover:border-night active:left-[1px] active:top-[2px] active:shadow-none md:h-14 md:px-8 lg:px-12"
                 >
                   Return to Home
                 </Link>
@@ -178,7 +183,7 @@ const Contact = () => {
         </section>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Contact
+export default Contact;

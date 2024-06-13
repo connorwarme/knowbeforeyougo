@@ -7,12 +7,15 @@ const MainText = () => {
         peace as one&apos;s days draw short.
       </div>
       <div className="max-w-[748px] md:justify-self-center">
-        <p className="text-lg md:text-xl font-semibold font-rem text-center">&quot;For everything there is a season, and a time for every matter under heaven: a time to be born, and a time to die&quot;</p>
+        <p className="text-lg md:text-xl font-semibold font-rem text-center">
+          &quot;For everything there is a season, and a time for every matter
+          under heaven: a time to be born, and a time to die&quot;
+        </p>
         <p className="text-end font-display mr-4">Ecclesiates 3:1-2</p>
       </div>
       <div className="lg:max-w-[1024px]">
         At some point we recognize are leaving this life and are heading into
-        uncharted territory… 
+        uncharted territory…
       </div>
       <div className="lg:max-w-[1024px]">
         This is our final act. We will never pass this way again.

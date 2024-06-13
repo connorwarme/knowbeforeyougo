@@ -1,16 +1,17 @@
 # Departing Life
 
-## Notes:  
+## Notes:
+
 - under development
 - needs a logo
 - add photo?
 - custom domain
 
-## Logo Ideas:  
+## Logo Ideas:
+
 - a bridge
 - a path
 - an hourglass / reflection of time
-
 
 # React + Vite
 

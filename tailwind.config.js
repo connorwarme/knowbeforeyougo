@@ -7,9 +7,23 @@ export default {
   ],
   theme: {
     fontFamily: {
-      body: ["Montserrat", 'Georgia', 'Cambria', "Times New Roman", 'Times', 'serif'],
-      display: ["Cinzel", 'Georgia', 'Cambria', "Times New Roman", 'Times', 'serif'],
-      rem: ["REM", 'Georgia', 'Cambria', "Times New Roman", 'Times', 'serif'],
+      body: [
+        "Montserrat",
+        "Georgia",
+        "Cambria",
+        "Times New Roman",
+        "Times",
+        "serif",
+      ],
+      display: [
+        "Cinzel",
+        "Georgia",
+        "Cambria",
+        "Times New Roman",
+        "Times",
+        "serif",
+      ],
+      rem: ["REM", "Georgia", "Cambria", "Times New Roman", "Times", "serif"],
     },
     extend: {
       colors: {
@@ -27,13 +41,13 @@ export default {
       keyframes: {
         translateX: {
           "0%": { transform: "translateX(100%)", opacity: "0" },
-          "80%": { transform: "translateX(-5%)" }, 
-          "100%": { transform: "translateX(0)", opacity: "1" }
-        }
+          "80%": { transform: "translateX(-5%)" },
+          "100%": { transform: "translateX(0)", opacity: "1" },
+        },
       },
       animation: {
-        translateX: "translateX 300ms ease-in-out forwards"
-      }
+        translateX: "translateX 300ms ease-in-out forwards",
+      },
     },
   },
   plugins: [],

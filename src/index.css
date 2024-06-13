@@ -3,38 +3,34 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
-  src: url(./assets/fonts/Montserrat-VariableFont_wght.ttf)
-    format('truetype');
+  src: url(./assets/fonts/Montserrat-VariableFont_wght.ttf) format("truetype");
 }
 @font-face {
-  font-family: 'Montserrat-Italic';
+  font-family: "Montserrat-Italic";
   font-style: italic;
   src: url(./assets/fonts/Montserrat-Italic-VariableFont_wght.ttf)
-    format('truetype');
+    format("truetype");
 }
 @font-face {
-  font-family: 'Cinzel';
+  font-family: "Cinzel";
   font-style: normal;
-  src: url(./assets/fonts/Cinzel-VariableFont_wght.ttf)
-    format('truetype');
+  src: url(./assets/fonts/Cinzel-VariableFont_wght.ttf) format("truetype");
 }
 @font-face {
-  font-family: 'REM';
+  font-family: "REM";
   font-style: normal;
-  src: url(./assets/fonts/REM-VariableFont_wght.ttf)
-    format('truetype');
+  src: url(./assets/fonts/REM-VariableFont_wght.ttf) format("truetype");
 }
 @font-face {
-  font-family: 'REM-Italic';
+  font-family: "REM-Italic";
   font-style: italic;
-  src: url(./assets/fonts/REM-Italic-VariableFont_wght.ttf)
-    format('truetype');
+  src: url(./assets/fonts/REM-Italic-VariableFont_wght.ttf) format("truetype");
 }
 
-html { 
-  scroll-behavior: smooth; 
+html {
+  scroll-behavior: smooth;
   height: 100%;
   overflow: auto;
 }
@@ -64,7 +60,7 @@ body {
   transition: opacity 300ms ease-in-out;
 }
 .nav-active > .nav-overlay {
-/* previously had this as above line, with ref */
+  /* previously had this as above line, with ref */
   height: 100vh;
   top: 0;
   visibility: visible;
@@ -77,6 +73,6 @@ nav {
   top: 0;
   right: 0;
 }
-nav.nav-active{
+nav.nav-active {
   display: block;
 }
