@@ -5,6 +5,7 @@ import Intro from "./components/Intro";
 import Accordion from "./components/Accordion";
 import MainText from "./components/MainText";
 import Footer from "./components/Footer";
+import Contact from "./components/Contact";
 
 function App() {
   const { pathname, hash, key } = useLocation();
@@ -36,6 +37,7 @@ function App() {
       <Intro />
       <MainText />
       <Accordion />
+      <Contact />
       <Footer />
     </div>
   );
