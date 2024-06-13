@@ -224,7 +224,7 @@ const chapter5Songs = [
     title: "People Get Ready, Jesus is Comin'",
     artist: "Crystal Lewis",
     url: "https://www.youtube.com/watch?v=ijs1fr2pl3g",
-    embed: `<iframe width="560" height="315" src="https://www.youtube.com/embed/ijs1fr2pl3g?si=GoIHOEczA6JpGEWL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`
+    embed: `https://www.youtube.com/embed/ijs1fr2pl3g?si=GoIHOEczA6JpGEWL`
   }
 ]
 // chapter 6 verses

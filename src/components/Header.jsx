@@ -34,14 +34,14 @@ const Header = () => {
   const overlayActiveStyle = 'fixed h-dvh w-dvw top-0 right-0 bg-black/65 blur-sm opacity-1 z-10 visible transition-all duration-300'
 
   // header div style, depending on view
-  const headerBgColor = 'flex items-center p-4 transition-all h-[84px] bg-transparent'
-  const headerBgColorDeep = 'flex items-center p-4 transition-all h-[84px] bg-deep'
+  const headerBgColor = 'flex items-center p-4 transition-all h-[84px] bg-transparent sm:h-[100px]'
+  const headerBgColorDeep = 'flex items-center p-4 transition-all h-[84px] bg-deep sm:h-[100px] sm:px-6 md:px-8 lg:px-20'
   // spacer style, depending on view
   const spacerStyleNarrow = 'spacer transition-all width-0'
   const spacerStyleWide = 'spacer transition-all grow'
   // title style, depending on view
-  const titleStyleNarrow = 'font-extrabold transition-all duration-300 text-xl sm:text-2xl translate-x-0'
-  const titleStyleWide = 'font-extrabold transition-all duration-300 text-3xl sm:text-4xl'
+  const titleStyleNarrow = 'font-extrabold transition-all duration-300 text-xl sm:text-2xl translate-x-0 md:text-4xl'
+  const titleStyleWide = 'font-extrabold transition-all duration-300 text-3xl sm:text-4xl md:text-6xl'
   // hamburger menu style, depending on view
   const hamburgerStyleHidden = 'p-1 rounded-sm h-fit relative hover:cursor-pointer hover:shadow-md active:shadow-none active:left-[1px] active:top-[2px] hidden md-2 z-20'
   const hamburgerStyleVisible = 'p-1 rounded-sm h-fit relative hover:cursor-pointer hover:shadow-md active:shadow-none active:left-[1px] active:top-[2px] block md-2 z-20'
@@ -58,7 +58,7 @@ const Header = () => {
             </a>
             <div className="spacer grow"></div>
             <button className={inView ? hamburgerStyleHidden : hamburgerStyleVisible} onClick={() => handleClick()} alt="Navigation menu">
-              <RxHamburgerMenu className='h-8 w-8 lg:hidden' />
+              <RxHamburgerMenu className='h-8 w-8 md:h-12 md:w-12' />
             </button>
           </div>
         </div>

@@ -31,7 +31,7 @@ function App() {
 
 
   return (
-    <div className="text-slate-800 bg-offwhite bg-slate font-body">
+    <div className="text-slate-800 bg-offwhite bg-slate font-body flex flex-col">
       <Header />
       <Intro />
       <MainText />

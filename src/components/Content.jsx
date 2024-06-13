@@ -7,7 +7,7 @@ import Quote from "./Quote";
 
 const Content = ({ content }) => {
   const listStyle = 'list-none border-b-2 border-deep mb-4 last-of-type:border-b-0'
-  const titleStyle = 'font-display font-semibold text-lg my-2 sm:text-xl'
+  const titleStyle = 'font-display font-semibold text-lg my-2 sm:text-xl lg:text-3xl'
   return ( 
     <div className="cardContent">
       {
