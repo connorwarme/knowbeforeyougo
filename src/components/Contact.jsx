@@ -104,7 +104,7 @@ const Contact = () => {
                     id="email"
                     name="email"
                     placeholder="Your email"
-                    className="w-full rounded-sm border-2 border-deep bg-transparent px-4 py-2 text-sm placeholder-night outline-deep focus:bg-shell/25 focus-visible:outline-deep focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50 lg:text-base"
+                    className="w-full rounded-sm border-2 border-deep bg-transparent px-4 py-2 text-sm placeholder-night outline-deep focus:bg-white/35 focus-visible:outline-deep focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50 lg:text-base"
                     onChange={handleEmail}
                   />
                   {emailError && (
@@ -117,7 +117,7 @@ const Contact = () => {
                     name="message"
                     placeholder="Your message"
                     rows="8"
-                    className="w-full rounded-sm border-2 border-deep bg-transparent px-4 py-3 text-sm placeholder-night outline-deep focus:bg-shell/25 focus-visible:outline-deep focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50 lg:text-base"
+                    className="w-full rounded-sm border-2 border-deep bg-transparent px-4 py-3 text-sm placeholder-night outline-deep focus:bg-sage/15 focus-visible:outline-deep focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50 lg:text-base"
                     onChange={handleMessage}
                   />
                   {messageError && (
@@ -145,13 +145,13 @@ const Contact = () => {
               </div>
               {error && (
                 <div className="my-4">
-                  <div className="flex items-center">
+                  <div className="flex justify-center items-center">
                     <ErrorIcon className="m-2 h-8 w-8 flex-shrink-0 text-red-600" />
                     <p className="font-semibold">
                       Apologies! There was an error sending your message.
                     </p>
                   </div>
-                  <p>
+                  <p className='text-center'>
                     Please refresh the page to try again. Sorry for the inconvenience!
                   </p>
                 </div>

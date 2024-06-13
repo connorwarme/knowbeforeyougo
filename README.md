@@ -3,8 +3,6 @@
 ## Notes:  
 - under development
 - needs a logo
-- needs contact section
-- needs meta tags
 - add photo?
 - custom domain
 
