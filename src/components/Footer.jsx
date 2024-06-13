@@ -5,7 +5,7 @@ const Footer = () => {
   // developer info?
   return ( 
     <>
-      <footer className="text-center py-6 pt-12 px-4">
+      <footer className="text-center py-6 pt-12 px-4 md:text-lg">
         <p className="pb-2">Copyright &copy; 2024</p>
         <div className="pt-2 border-deep border-t-2">
           <p className="flex justify-center">

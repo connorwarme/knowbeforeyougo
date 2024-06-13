@@ -69,8 +69,8 @@ const Nav = ({ closeOverlay }) => {
 
   return (
     <>
-      <div className="z-10 relative px-8 py-4 bg-offwhite min-h-dvh min-w-[200px] animate-[translateX_350ms_ease-in-out_forwards]">
-        <ul className="mt-[30%] *:my-4 h-auto transition-all duration-300">
+      <div className="z-10 relative px-8 md:px-12 py-4 bg-offwhite min-h-dvh min-w-[200px] md:min-w-[350px] animate-[translateX_350ms_ease-in-out_forwards]">
+        <ul className="mt-[30%] *:my-4 h-auto transition-all duration-300 md:text-xl">
           <li><Link to="/" className="" onClick={handleNavClick}>Home</Link></li>
           <li className="relative">
             <div className="flex items-center justify-between">
@@ -79,7 +79,7 @@ const Nav = ({ closeOverlay }) => {
                 <Expand className={showResources ? expandStyleRotate : expandStyle} title={showResources ? 'Minimize' : 'Expand'} alt={`${showResources ? 'Minimize' : 'Expand'} the chapter links`} />
               </button>
             </div>
-            <ul className={`top-full width-full left-0 z-0 font-semibold text-sm`}>
+            <ul className={`top-full width-full left-0 z-0 font-semibold text-sm md:text-lg`}>
               {chapterLinks}
             </ul>
           </li>
@@ -90,7 +90,7 @@ const Nav = ({ closeOverlay }) => {
                 <Expand className={showTopics ? expandStyleRotate : expandStyle} title={showTopics ? 'Minimize' : 'Expand'} alt={`${showTopics ? 'Minimize' : 'Expand'} the topic links`} />
               </button>
             </div>
-            <ul className={`top-full width-full left-0 z-0 font-semibold text-sm`}>
+            <ul className={`top-full width-full left-0 z-0 font-semibold text-sm md:text-lg`}>
               {topicLinks}
             </ul>
           </li>

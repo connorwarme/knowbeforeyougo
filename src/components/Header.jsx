@@ -44,7 +44,7 @@ const Header = () => {
   const titleStyleWide = 'font-extrabold transition-all duration-300 text-3xl sm:text-4xl md:text-6xl'
   // hamburger menu style, depending on view
   const hamburgerStyleHidden = 'p-1 rounded-sm h-fit relative hover:cursor-pointer hover:shadow-md active:shadow-none active:left-[1px] active:top-[2px] hidden md-2 z-20'
-  const hamburgerStyleVisible = 'p-1 rounded-sm h-fit relative hover:cursor-pointer hover:shadow-md active:shadow-none active:left-[1px] active:top-[2px] block md-2 z-20'
+  const hamburgerStyleVisible = 'p-1 rounded-sm lg:rounded-md h-fit relative hover:cursor-pointer hover:shadow-md active:shadow-none active:left-[1px] active:top-[2px] block md-2 z-20'
 
   return (
     <>
