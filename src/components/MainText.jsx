@@ -1,6 +1,6 @@
 const MainText = () => {
   return (
-    <div className="px-4 bg-eggshell grid gap-4 sm:px-8 sm:gap-6">
+    <div className="px-4 bg-eggshell grid gap-4 sm:px-12 sm:gap-6">
       <div>
         A concise book to facilitate hope and the assurance of heaven for
         believers as well as provide an opportunity for the unconvinced to find
@@ -19,7 +19,7 @@ const MainText = () => {
       </div>
       <div>
         Now is the time to wrestle with existential questions like:
-        <ul className="list-disc ml-4 mt-2">
+        <ul className="list-disc ml-4 mt-2 sm:ml-8">
           <li>Is there something else after I pass from this world?</li>
           <li>How can I end my days here well?</li>
           <li>What can I do to lessen the pain of those I leave behind?</li>
