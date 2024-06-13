@@ -1,4 +1,5 @@
 /* eslint-disable react/prop-types */
+import { useRef } from "react";
 import { useLocation } from "react-router-dom";
 import Content from "./Content";
 import { MdExpandMore as Expand } from "react-icons/md";
@@ -14,7 +15,6 @@ export default function Card({ card, selected, updateSelected, handleClick }) {
   // if location.state is not null, update the parent component's state
   (location.state && location.state.index !== null) ? 
     setTimeout(() => {
-      console.log(location.state.index, card.id)
       if (location.state.index === card.id) {
         updateSelected(location.state.index)
         location.state.index = null;
@@ -23,6 +23,7 @@ export default function Card({ card, selected, updateSelected, handleClick }) {
     }, 500) : 
     null;
 
+  const cardRef = useRef();
   // to do:
   // would be nice to add transition to the content-container
   // (currently doesn't work)
@@ -33,7 +34,8 @@ export default function Card({ card, selected, updateSelected, handleClick }) {
       <div
         className="card my-8"
         id={card.hash}
-        onClick={() => handleClick(card.id)}
+        ref={cardRef}
+        onClick={() => handleClick(card.id, cardRef.current)}
       >
         <h3 className="font-display flex flex-col transition-all duration-300 lg:gap-2">
           <span className="sm:text-xl lg:text-2xl">{card.title}</span>

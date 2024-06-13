@@ -336,7 +336,7 @@ const chapter7Songs = [
     title: "In The Sweet Bye and Bye",
     artist: "Johnny Cash",
     url: "https://www.youtube.com/watch?v=8lBCgwmBVTQ",
-    embed: `<iframe width="560" height="315" src="https://www.youtube.com/embed/8lBCgwmBVTQ?si=y-qKBluMG7j8IvRn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
+    embed: `https://www.youtube.com/embed/8lBCgwmBVTQ?si=y-qKBluMG7j8IvRn`
   }
 ]
 

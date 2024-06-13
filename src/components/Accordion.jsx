@@ -9,11 +9,15 @@ export default function Accordion() {
   const cardArray = chapters;
   const topicsArray = topics;
 
-  const handleClick = (index) => {
+  const handleClick = (index, ref) => {
     if (selected === index) {
-      return setSelected(null);
+      setSelected(null);
+    } else {
+      setSelected(index);
     }
-    setSelected(index);
+    // needed timeout to consistently work
+    // don't know why
+    setTimeout(() => window.scrollTo(0, ref.offsetTop - 100), 150);  
   };
   
   return (
