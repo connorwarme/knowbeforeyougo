@@ -39,7 +39,7 @@ export default function Card({ card, selected, updateSelected, handleClick }) {
       >
         <h3 className="font-display flex flex-col transition-all duration-300 lg:gap-2">
           <span className="sm:text-xl lg:text-2xl">{card.title}</span>
-          <span className="self-center font-bold text-2xl lg:text-4xl">{card.name}</span>
+          <span className="self-center font-bold sm:text-2xl lg:text-4xl">{card.name}</span>
         </h3>
         <div className={selected === card.id ? containerStyleOpen : containerStyle}>
           { selected === card.id && <Content content={card.content} /> }

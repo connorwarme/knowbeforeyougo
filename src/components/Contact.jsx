@@ -81,12 +81,10 @@ const Contact = () => {
 
 
   return (
-    <div className="w-dvw md:grid md:grid-cols-9 md:justify-items-center">
-      <div className="md:col-start-2 md:col-end-9 md:w-[70%] md:max-w-2xl">
-        <h1 className="m-10 text-center font-display text-4xl text-deep">
-          Contact
-        </h1>
-        <section className="mx-auto flex w-full flex-col p-4 py-8 shadow-sm transition-all md:rounded-md lg:p-8">
+    <div className="w-dvw sm:grid sm:grid-cols-9 sm:justify-items-center">
+      <div className="sm:col-start-2 sm:col-end-9 sm:w-[70%] sm:max-w-2xl">
+      <h2 className="font-display font-bold text-xl sm:text-3xl lg:text-5xl mx-auto w-fit border-deep border-b-2 my-6 sm:border-b-4 lg:my-16" id="contact">Contact</h2>
+        <section className="mx-auto flex w-full flex-col p-4 py-8 transition-all md:rounded-md lg:p-8">
           {!success && (
             <form
               onSubmit={handleSubmit}
@@ -96,7 +94,7 @@ const Contact = () => {
             >
               <div className="mb-6 flex flex-col space-y-4 lg:space-y-3">
                 <div className="pb-4 text-center">
-                  <h3 className="text-lg font-bold">
+                  <h3 className="sm:text-lg font-semibold">
                     I&apos;d love to hear from you!
                   </h3>
                 </div>
@@ -106,7 +104,7 @@ const Contact = () => {
                     id="email"
                     name="email"
                     placeholder="Your email"
-                    className="w-full rounded-sm border-2 border-deep bg-transparent px-4 py-2 text-sm placeholder-black outline-black focus:bg-deep focus:outline-2 disabled:cursor-not-allowed disabled:opacity-50 lg:text-base"
+                    className="w-full rounded-sm border-2 border-deep bg-transparent px-4 py-2 text-sm placeholder-night outline-deep focus:bg-shell/25 focus-visible:outline-deep focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50 lg:text-base"
                     onChange={handleEmail}
                   />
                   {emailError && (
@@ -119,7 +117,7 @@ const Contact = () => {
                     name="message"
                     placeholder="Your message"
                     rows="8"
-                    className="w-full rounded-sm border-2 border-deep bg-transparent px-4 py-3 text-sm placeholder-black outline-black focus:bg-deep focus:outline-2 disabled:cursor-not-allowed disabled:opacity-50 lg:text-base"
+                    className="w-full rounded-sm border-2 border-deep bg-transparent px-4 py-3 text-sm placeholder-night outline-deep focus:bg-shell/25 focus-visible:outline-deep focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50 lg:text-base"
                     onChange={handleMessage}
                   />
                   {messageError && (
@@ -131,16 +129,16 @@ const Contact = () => {
                 {!pending ? (
                   <button
                     type="submit"
-                    className="relative mr-4 rounded-lg border-2 border-deep bg-transparent px-4 py-2 text-lg font-semibold text-black shadow-sm shadow-black transition duration-200 ease-in-out hover:bg-deep hover:text-offwhite active:left-[1px] active:top-[2px] active:shadow-none md:px-8"
+                    className="relative mr-4 rounded-lg border-2 border-deep bg-transparent px-4 py-2 text-lg font-semibold shadow-sm shadow-night transition duration-200 ease-in-out hover:bg-deep hover:text-offwhite active:left-[1px] active:top-[2px] active:shadow-none md:px-8"
                   >
                     Send
                   </button>
                 ) : (
                   <button
                     disabled
-                    className="mr-4 flex rounded-lg border-2 border-deep bg-transparent px-4 py-2 text-lg font-semibold text-black"
+                    className="mr-4 flex rounded-lg border-2 border-deep bg-transparent px-4 py-2 text-lg font-semibold"
                   >
-                    <LoadingIcon className="mr-4 h-6 w-6 flex-shrink-0 animate-spin text-black" />
+                    <LoadingIcon className="mr-4 h-6 w-6 flex-shrink-0 animate-spin" />
                     <span>Sending</span>
                   </button>
                 )}
@@ -170,7 +168,7 @@ const Contact = () => {
               <div className="flex justify-center">
                 <Link
                   to={'/'}
-                  className="btn-link relative flex items-center px-4 py-2 text-black shadow-md shadow-black/50 outline-black hover:border-black active:left-[1px] active:top-[2px] active:shadow-none md:h-14 md:px-8 lg:px-12"
+                  className="btn-link relative flex items-center px-4 py-2 shadow-md shadow-night/50 outline-night hover:border-night active:left-[1px] active:top-[2px] active:shadow-none md:h-14 md:px-8 lg:px-12"
                 >
                   Return to Home
                 </Link>
