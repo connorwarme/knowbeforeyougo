@@ -95,7 +95,7 @@ const chapter2Songs = [
     title: "(I Can't Get No) Satisfaction",
     artist: "The Rolling Stones",
     url: "https://www.youtube.com/watch?v=nrIPxlFzDi0",
-    embed: `<iframe width="560" height="315" src="https://www.youtube.com/embed/nrIPxlFzDi0?si=T1aM6HxuvQNR4w0_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`
+    embed: `https://www.youtube.com/embed/nrIPxlFzDi0?si=V2eCQ9Hk928VZKkp`
   }
 ]
 const chapter3Verses = [

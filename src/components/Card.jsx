@@ -36,8 +36,8 @@ export default function Card({ card, selected, updateSelected, handleClick }) {
         onClick={() => handleClick(card.id)}
       >
         <h3 className="font-display flex flex-col">
-          <span>{card.title}</span>
-          <span className="self-center font-bold text-lg">{card.name}</span>
+          <span className="sm:text-xl">{card.title}</span>
+          <span className="self-center font-bold text-2xl">{card.name}</span>
         </h3>
         <div className={selected === card.id ? containerStyleOpen : containerStyle}>
           { selected === card.id && <Content content={card.content} /> }
