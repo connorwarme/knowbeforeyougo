@@ -9,7 +9,9 @@ const router = createBrowserRouter([
     path: "/",
     element: <App />,
   },
-]);
+], {
+  basename: "/knowbeforeyougo",
+});
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
