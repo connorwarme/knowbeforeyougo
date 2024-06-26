@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useContext, useState } from "react";
 import { useLocation } from "react-router-dom";
 import Header from "./components/Header";
 import Intro from "./components/Intro";
@@ -6,6 +6,8 @@ import Accordion from "./components/Accordion";
 import MainText from "./components/MainText";
 import Footer from "./components/Footer";
 import Contact from "./components/Contact";
+import { ThemeContext } from "./components/Theme/ThemeContext";
+import ThemeDisplay from "./components/Theme/ThemeDisplay";
 
 function App() {
   const { pathname, hash, key } = useLocation();
@@ -30,14 +32,18 @@ function App() {
     }
   }, [pathname, hash, key]); // do this on route change
 
+  const [theme, setTheme] = useState('dark')
   return (
     <div className="bg-offwhite text-night bg-slate font-body flex flex-col">
-      <Header />
+      {/* <Header />
       <Intro />
       <MainText />
       <Accordion />
       <Contact />
-      <Footer />
+      <Footer /> */}
+      <ThemeContext.Provider value={{theme, setTheme}}>
+        <ThemeDisplay />
+      </ThemeContext.Provider>
     </div>
   );
 }
