@@ -6,7 +6,7 @@ import Accordion from "./components/Accordion";
 import MainText from "./components/MainText";
 import Footer from "./components/Footer";
 import Contact from "./components/Contact";
-import { ThemeContext } from "./components/Theme/ThemeContext";
+import ThemeProvider from "./components/Theme/ThemeProvider";
 import ThemeDisplay from "./components/Theme/ThemeDisplay";
 
 function App() {
@@ -32,7 +32,6 @@ function App() {
     }
   }, [pathname, hash, key]); // do this on route change
 
-  const [theme, setTheme] = useState('dark')
   return (
     <div className="bg-offwhite text-night bg-slate font-body flex flex-col">
       {/* <Header />
@@ -41,9 +40,9 @@ function App() {
       <Accordion />
       <Contact />
       <Footer /> */}
-      <ThemeContext.Provider value={{theme, setTheme}}>
+      <ThemeProvider>
         <ThemeDisplay />
-      </ThemeContext.Provider>
+      </ThemeProvider>
     </div>
   );
 }

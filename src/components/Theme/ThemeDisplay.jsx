@@ -1,12 +1,12 @@
-import { ThemeContext } from "./ThemeContext";
-import { useContext } from "react";
+import { useTheme } from "./ThemeContext";
 
 const ThemeDisplay = () => {
-  const {theme, setTheme} = useContext(ThemeContext);
+  const {dark, toggleDark} = useTheme()
+  console.log('theme display', dark)
   return ( 
     <div>
-      <h1 className="text-3xl font-bold">Current Theme: {theme}</h1>
-      <button onClick={() => setTheme(prevTheme => prevTheme === 'light' ? 'dark' : 'light')}>Toggle</button>
+      <h1 className="text-3xl font-bold">Current Theme: {dark ? 'true' : 'false'}</h1>
+      <button onClick={() => toggleDark()}>Toggle</button>
     </div>
    );
 }
