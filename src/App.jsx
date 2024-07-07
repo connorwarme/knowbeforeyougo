@@ -6,8 +6,6 @@ import Accordion from "./components/Accordion";
 import MainText from "./components/MainText";
 import Footer from "./components/Footer";
 import Contact from "./components/Contact";
-import ThemeProvider from "./components/Theme/ThemeProvider";
-import ThemeDisplay from "./components/Theme/ThemeDisplay";
 
 function App() {
   const { pathname, hash, key } = useLocation();
@@ -34,15 +32,12 @@ function App() {
 
   return (
     <div className="bg-offwhite text-night bg-slate font-body flex flex-col">
-      {/* <Header />
+      <Header />
       <Intro />
       <MainText />
       <Accordion />
       <Contact />
-      <Footer /> */}
-      <ThemeProvider>
-        <ThemeDisplay />
-      </ThemeProvider>
+      <Footer />
     </div>
   );
 }
